@@ -1,0 +1,9 @@
+/* Sans-serif
+--------------------------------*/
+
+@font-face{
+	font-family:"Didact Gothic";
+	font-style:normal;
+	font-weight:normal;
+	src:url("../fonts/DidactGothic/DidactGothic.ttf") format("truetype");
+}

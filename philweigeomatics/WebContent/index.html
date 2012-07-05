@@ -17,7 +17,15 @@
     <link rel="apple-touch-icon" sizes="72x72" href="">
     <link rel="apple-touch-icon" sizes="114x114" href="">
     
+    
+    <!--  fonts  -->
+    <link rel="stylesheet" media="screen" href="http://openfontlibrary.org/face/didact-gothic" rel="stylesheet" type="text/css"/>
+     <!-- Hack for IE -->
+    <!--[if lt IE 7]><!--> <link rel="stylesheet" href="resources/css/fonts.css"><!--<![endif]-->
+    
+    
     <!--  stylesheet -->
+    <link rel="stylesheet" href="resources/css/reset.css"/>
     <link rel="stylesheet" href="resources/css/base.css"/>
     <link rel="stylesheet" href="resources/css/main.css"/> 
     
@@ -25,15 +33,15 @@
     <noscript><meta http-equiv="refresh" content="0;url=/nojs"></noscript>
 </head>
 <body>
-	<header id="wrapper">
+	<header id="wrapper" class="clearfix">
 		<div id="map"></div>
-		<div id="title">Phil Wei</div>
-		<nav>
+		<div id="title" class="leftfloat">Phil Wei</div>
+		<nav class="rightfloat">
 			<a href="#">Resume</a>
 			<a href="#">Contact Phil</a>
 		</nav>
 	</header>
-	<div id="content">
+	<div id="content" class="central">
 		<section class="big">
 			<h2>My Hobbies</h2>
 			<a href="#">
@@ -62,7 +70,7 @@
 			</a>
 		</section>
 	</div>
-	<footer>
+	<footer class="central">
 	</footer>
 </body>
 </html>
