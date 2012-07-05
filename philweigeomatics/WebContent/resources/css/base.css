@@ -62,15 +62,22 @@ h4{ font-size: 1.6em; }
 }
 
 
-
-
 /* Headers
 ----------------------------------------*/
 
 
 /* Map
 ----------------------------------------*/
+#map{
+	height:200px;
+	background-color: red;
+}
 
+div.wrapper{
+	position:absolute;
+	top:0px;
+	width:100%;
+}
 
 /* Images
 ----------------------------------------*/
