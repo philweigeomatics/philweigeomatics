@@ -29,12 +29,19 @@
     <link rel="stylesheet" href="resources/css/base.css"/>
     <link rel="stylesheet" href="resources/css/main.css"/> 
     
+	<!-- Script -->
+    <script src="http://openlayers.org/api/OpenLayers.js"></script>
+    <script src="http://maps.google.com/maps/api/js?v=3&amp;sensor=false"></script>
+    <script src="resources/js/map.js"></script>
+    
     <!-- line below to show a different page when javascript isn't enabled at the browser. /nojs file will be accessed if javascript is disabled -->
     <noscript><meta http-equiv="refresh" content="0;url=/nojs"></noscript>
 </head>
 <body>
 	<header id="wrapper" class="clearfix container">
-		<div id="map"></div>
+		<div id="mapWrapper">
+			<div id="map"></div>
+		</div>
 		<div class="wrapper"> <!-- The wrapper here makes the inner part margin autoable -->
 			<div class="inner">
 				<div id="title" class="leftfloat"><a href="http://www.linkedin.com/pub/phil-wei/17/61a/112">Phil Wei</a></div>
@@ -56,6 +63,7 @@
 			</section>
 			<section class="medium">
 				<h2>My Works Explained</h2>
+				<iframe width='500' height='300' frameBorder='0' src='http://a.tiles.mapbox.com/v3/phiweigeomatics.map-zh8br687.html#3/0/0'></iframe>
 				<a href="#">
 					<img src="#" alt="my work1"/>
 				</a>
