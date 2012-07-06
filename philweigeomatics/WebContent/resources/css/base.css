@@ -23,6 +23,16 @@ h2{ font-size: 2.4em; }
 h3{ font-size: 2.0em; }
 h4{ font-size: 1.6em; }
 
+nav a{
+	font-size: 14px;
+	text-decoration:none;
+	color:white;
+
+}
+
+header{
+	color:
+}
 
 
 
@@ -61,26 +71,56 @@ h4{ font-size: 1.6em; }
 	position:absolute;
 }
 
+.barleft{
+	margin-right:2px;
+}
+
+.barright{
+	margin-left:2px;
+}
+
+
 
 /* Headers
 ----------------------------------------*/
-
-
-/* Map
-----------------------------------------*/
-#map{
-	height:200px;
-	background-color: red;
-}
 
 div.wrapper{
 	position:absolute;
 	top:0px;
 	width:100%;
+	background: url("../img/75percent_transparent_black_40by40.png") 0 repeat-x;
 }
+
+header div.wrapper{
+	height:40px;
+}
+
+#title>a{
+	display:block;
+	height:40px;
+	width:120px;
+	text-indent:-9999em;
+	background: url("../img/Phil_Wei_Title_Green.png") 0 no-repeat;
+}
+
+header nav{
+	vertical-align:middle;
+	margin-top: 24px; /* 40 px total height of the header wrapper minus 14px of font + 1px of bottom*/
+}
+/* Map
+----------------------------------------*/
+#map{
+	margin-top:40px;
+	height:200px;
+	background-color: red;
+}
+
 
 /* Images
 ----------------------------------------*/
+a img{
+	border:0;
+}
 
 /* Lists
 ----------------------------------------*/
