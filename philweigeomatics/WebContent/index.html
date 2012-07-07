@@ -21,13 +21,17 @@
     <!--  fonts  -->
     <link rel="stylesheet" media="screen" href="http://openfontlibrary.org/face/didact-gothic" rel="stylesheet" type="text/css"/>
      <!-- Hack for IE -->
-    <!--[if lt IE 7]><!--> <link rel="stylesheet" href="resources/css/fonts.css"><!--<![endif]-->
+    <!--[if lt IE 7]><!--><link rel="stylesheet" href="resources/css/fonts.css"><!--  --><![endif]-->
     
     
     <!--  stylesheet -->
     <link rel="stylesheet" href="resources/css/reset.css"/>
     <link rel="stylesheet" href="resources/css/base.css"/>
-    <link rel="stylesheet" href="resources/css/main.css"/> 
+    <link rel="stylesheet" href="resources/css/main.css"/>
+    
+    <!-- [if IE]>
+    <link rel="stylesheet" href="resources/css/base_ie.css"/>
+    <![endif]--> 
     
 	<!-- Script -->
     <script src="http://openlayers.org/api/OpenLayers.js"></script>
@@ -55,15 +59,32 @@
 	</header>
 	<div id="content" class="container">
 		<div class="inner">
-			<section class="big clearfix">
-				<h2 class="rightfloat">My Hobbies</h2>
-				<a href="#" class="leftfloat">
-					<img src="resources/img/GSX_R_FrontSide_Tiny.jpg" alt="my hobby"/>
-				</a>
+			<section class="framed big clearfix">
+				<div class="leftfloat" id="myhobbies_pix">
+					<!--<a href="#"><img src="resources/img/gsxr_w_helmet_small_600by384.jpg" height="384" width="600" alt="my hobby"/></a> -->
+				</div>
+				<div id="myhobbies_detail_container" class="rightfloat">
+					<div class="bg_bl" id="myhobbies_title_wrapper">
+						<div class="bg_tl">
+							<div class="bg_tr">
+								<div class="bg_br"><span class="title">My Hobbies</span></div>
+							</div>
+						</div>
+					</div>
+					<div id="myhobbies_text_wrapper">
+						<div><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p></div>
+					</div>
+					<div id="myhobbies_images_collection">
+						<div class="margin_center">
+							<div id="thumbnail1" class="thumbnail"></div>
+							<div id="thumbnail2" class="thumbnail"></div>
+							<div id="thumbnail3" class="thumbnail"></div>
+						</div>	
+					</div>
+				</div>		
 			</section>
-			<section class="medium">
+			<section class="framed medium clearfix">
 				<h2>My Works Explained</h2>
-				<iframe width='500' height='300' frameBorder='0' src='http://a.tiles.mapbox.com/v3/phiweigeomatics.map-zh8br687.html#3/0/0'></iframe>
 				<a href="#">
 					<img src="#" alt="my work1"/>
 				</a>

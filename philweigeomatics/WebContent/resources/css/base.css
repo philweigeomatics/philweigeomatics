@@ -23,6 +23,24 @@ h2{ font-size: 2.4em; }
 h3{ font-size: 2.0em; }
 h4{ font-size: 1.6em; }
 
+.big p{
+	font-size: 1.6em;
+	font-weight:bold;
+	line-height:180%;
+}
+
+.medium p{
+	font-size: 1.4em;
+	font-weight:bold;
+	line-height:150%;
+}
+
+.small p{
+	font-size: 1.2em;
+	font-weight: bold;
+	line-height:150%;
+}
+
 nav a{
 	font-size: 14px;
 	text-decoration:none;
@@ -30,16 +48,22 @@ nav a{
 
 }
 
-header{
-	color:
+span.title{
+	font-size:2.4em;
+	font-weight:bold;
+	color:#FFFFFF;
 }
-
 
 
 /* Structure
 ----------------------------------------*/
 .container{
 	width:100%;
+}
+
+div.container{
+	position:absolute;
+	top:230px;
 }
 .inner{
 	margin-left:auto;
@@ -79,11 +103,101 @@ header{
 	margin-left:2px;
 }
 
+.margin_center{
+	margin:auto;
+}
 
+#myhobbies_title_wrapper{
+	width:200px;
+	height:60px;
+	position:absolute;
+	left:57px;
+	top: 20px; /* = height of the image(384)/2 - height of the wrapper(60px)/2 */
+}
+
+#myhobbies_detail_container{
+	width:314px;
+	height:384px;
+	position:relative;
+	background-color:#FFFFFF;
+}
+
+#myhobbies_text_wrapper{
+	position:absolute;
+	width:314px;
+	top: 100px;
+}
+
+#myhobbies_text_wrapper div{
+	margin:auto;
+	width:300px;
+}
+
+#myhobbies_images_collection{
+	position:absolute;
+	bottom: 0;
+	width:314px;
+}
+#myhobbies_images_collection div.margin_center{
+	margin:auto;
+	width:300px;
+}
+
+.bg_bl{
+	background-color: rgb(0,0,0);
+	background-color: rgba(0,0,0,0.8);
+	background-image:url("../img/corner_bl.gif");
+	background-repeat:no-repeat;
+	background-position:bottom left;
+}
+
+
+.bg_tl{
+	background-image:url("../img/corner_tl.gif");
+	background-repeat:no-repeat;
+	width:100%;
+	height:100%;
+}
+
+.bg_tr{
+	background-image:url("../img/corner_tr.gif");
+	background-repeat: no-repeat;
+	background-position:top right;
+	width:100%;
+	height:100%;
+}
+
+.bg_br{
+	background-image:url("../img/corner_br.gif");
+	background-repeat:no-repeat;
+	background-position:bottom right;
+	width:100%;
+	height:100%;
+}
+
+div.bg_br{
+	text-align:center;
+}
+
+span.title{
+	padding-top:50%;
+	line-height:60px;
+}
+
+#myhobbies_pix{
+	width:600px;
+	height:384px;
+	background: url("../img/gsxr_w_helmet_small_600by384.jpg") 0 no-repeat;
+}
+
+#myhobbies_images_collection div.thumbnail{
+	width:100px;
+	height:64px;
+	float:left;
+}
 
 /* Headers
 ----------------------------------------*/
-
 div.wrapper{
 	position:absolute;
 	top:0px;
@@ -107,6 +221,21 @@ header nav{
 	vertical-align:middle;
 	margin-top: 24px; /* 40 px total height of the header wrapper minus 14px of font + 1px of bottom*/
 }
+
+header nav a:link, header nav a:visited{
+	color:#FFFFFF;
+}
+
+header nav a:hover{
+	color: #808080;
+}
+
+header nav a.verticalbar:hover{
+	color: #FFFFFF;
+	cursor:default;
+}
+
+
 /* Map
 ----------------------------------------*/
 #mapWrapper{
@@ -119,12 +248,36 @@ header nav{
 	height:100%;
 }
 
+/* Content
+----------------------------------------*/
+.framed{
+	border: 1px solid #666666;
+}
+
+
 
 /* Images
 ----------------------------------------*/
 a img{
 	border:0;
 }
+
+.thumbnail{
+	cursor:pointer;
+}
+
+#thumbnail1{
+	background:url("../img/gsxr_w_helmet_tiny_100by64.jpg") 0 no-repeat;
+}
+
+#thumbnail2{
+	background:url("../img/gsxr_w_helmet_tiny_100by64.jpg") 0 no-repeat;
+}
+
+#thumbnail3{
+	background:url("../img/gsxr_w_helmet_tiny_100by64.jpg") 0 no-repeat;
+}
+
 
 /* Lists
 ----------------------------------------*/
