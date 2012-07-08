@@ -7,7 +7,7 @@ header, section, footer, aside, nav, article, figure, figcaption{
 body{
 	/* setting global styles */
 	color:#666666;
-	background-color:#FFFFFF;
+	background-color:#F4F4F4;
 	font-size: 62.5%; /* to make 1 em = 10 px */
 	font-family:'Didact Gothic';
 }
@@ -18,12 +18,12 @@ input,select,th,td{
 p{ 
 	font-size: 1.4em;
 }
-h1{ font-size: 3.6em; }
-h2{ font-size: 2.4em; }
-h3{ font-size: 2.0em; }
+h1{ font-size: 3.6em; font-weight:bold; }
+h2{ font-size: 2.4em; font-weight:bold;}
+h3{ font-size: 2.0em; font-weight:bold;}
 h4{ font-size: 1.6em; }
 
-.big p{
+.big p, .medium p{
 	font-size: 1.6em;
 	font-weight:bold;
 	line-height:180%;
@@ -54,17 +54,30 @@ span.title{
 	color:#FFFFFF;
 }
 
+#myworks_title_wrapper h2{
+	color:#FFFFFF;
+}
+
+.hoverable_text_wrapper:hover{
+	cursor:pointer;
+	color: #00FF7F;
+}
 
 /* Structure
 ----------------------------------------*/
 .container{
 	width:100%;
+	/*background: url("../img/content.jpg") repeat scroll 0 0 #F4F4F4;*/
 }
 
+section{
+	background-color: #FFFFFF;
+}
 div.container{
 	position:absolute;
 	top:230px;
 }
+
 .inner{
 	margin-left:auto;
 	margin-right:auto;
@@ -103,45 +116,15 @@ div.container{
 	margin-left:2px;
 }
 
+.big, .medium{
+	margin-bottom:15px;
+}
+
 .margin_center{
 	margin:auto;
 }
 
-#myhobbies_title_wrapper{
-	width:200px;
-	height:60px;
-	position:absolute;
-	left:57px;
-	top: 20px; /* = height of the image(384)/2 - height of the wrapper(60px)/2 */
-}
 
-#myhobbies_detail_container{
-	width:314px;
-	height:384px;
-	position:relative;
-	background-color:#FFFFFF;
-}
-
-#myhobbies_text_wrapper{
-	position:absolute;
-	width:314px;
-	top: 100px;
-}
-
-#myhobbies_text_wrapper div{
-	margin:auto;
-	width:300px;
-}
-
-#myhobbies_images_collection{
-	position:absolute;
-	bottom: 0;
-	width:314px;
-}
-#myhobbies_images_collection div.margin_center{
-	margin:auto;
-	width:300px;
-}
 
 .bg_bl{
 	background-color: rgb(0,0,0);
@@ -180,20 +163,37 @@ div.bg_br{
 }
 
 span.title{
-	padding-top:50%;
 	line-height:60px;
+	display:block;
 }
 
-#myhobbies_pix{
-	width:600px;
-	height:384px;
-	background: url("../img/gsxr_w_helmet_small_600by384.jpg") 0 no-repeat;
+
+/* Borders
+----------------------------------------*/
+
+.rounded_border{
+	border-radius:10px;
+	-moz-border-radius:10px;
+	-webkit-border-radius:10px;
 }
 
-#myhobbies_images_collection div.thumbnail{
-	width:100px;
-	height:64px;
-	float:left;
+.rounded_border_br{
+	border-bottom-right-radius:10px;
+	-moz-border-radius-bottomright:10px;
+	-webkit-border-bottom-right-radius:10px;
+}
+
+.rounded_border_bl{
+	border-bottom-left-radius:10px;
+	-moz-border-radius-bottomleft:10px;
+	-webkit-border-bottom-left-radius:10px;
+}
+
+.shadowed_box_br{
+	/* shadowing a box to the bottom right direction */
+	box-shadow: 2px 2px 10px rgba(105,105,105,.7);
+	-webkit-box-shadow: 2px 2px 10px rgba(105,105,105,.7);
+	-moz-box-shadow: 2px 2px 10px rgba(105,105,105,.7);
 }
 
 /* Headers
@@ -248,6 +248,7 @@ header nav a.verticalbar:hover{
 	height:100%;
 }
 
+
 /* Content
 ----------------------------------------*/
 .framed{
@@ -255,6 +256,100 @@ header nav a.verticalbar:hover{
 }
 
 
+/*****      My Hobbies Area     ******/
+#myhobbies_pix{
+	width:600px;
+	height:384px;
+	background: url("../img/gsxr_w_helmet_small_600by384.jpg") 0 no-repeat;
+}
+
+#myhobbies_images_collection div.thumbnail{
+	width:100px;
+	height:64px;
+	float:left;
+}
+
+#myhobbies_title_wrapper{
+	width:200px;
+	height:60px;
+	position:absolute;
+	left:57px;
+	top: 20px; /* = height of the image(384)/2 - height of the wrapper(60px)/2 */
+}
+
+#myhobbies_detail_container{
+	width:314px;
+	height:384px;
+	position:relative;
+	background-color:#FFFFFF;
+}
+
+#myhobbies_text_wrapper{
+	position:absolute;
+	width:314px;
+	top: 100px;
+}
+
+#myhobbies_text_wrapper div{
+	margin:auto;
+	width:300px;
+}
+
+#myhobbies_images_collection{
+	position:absolute;
+	bottom: 0;
+	width:314px;
+}
+#myhobbies_images_collection div.margin_center{
+	margin:auto;
+	width:300px;
+}
+
+
+
+/*****      My Works Area       ******/
+
+#myworks_title_wrapper{
+	margin: 20px auto;
+	width:400px;
+	height:60px;
+}
+
+#myworks_title_wrapper h2{
+	line-height:60px;
+	text-align:center;
+}
+
+#myworks_images_wrapper{
+	width:100%;
+}
+
+#myworks_text_wrapper{
+	margin-bottom:20px;
+	width:100%;
+}
+
+#myworks_text_wrapper div p{
+	line-height:150%;
+	padding-left:10px;
+	padding-right:10px;
+	height:100px;
+}
+
+/*****      My Skills Area      ******/
+#myskills_left_container{
+	position:relative;
+	height:300px;
+	width:300px;
+}
+#myskills_title_wrapper{
+	position:absolute;
+	width:250px;
+	left:50%;
+	top:50%;
+	margin-top:-30px;
+	margin-left:-125px;
+}
 
 /* Images
 ----------------------------------------*/
@@ -279,8 +374,32 @@ a img{
 }
 
 
+.myworks_img{
+	cursor:pointer;
+	height:191px;
+	width:304px;
+	float:left;
+}
+#myworks_img1{
+	background:url("../img/gis_editing_304by191.png") 0 no-repeat;
+}
+
+#myworks_img2{
+	background:url("../img/cartography_304by191.png") 0 no-repeat;
+}
+
+#myworks_img3{
+	background:url("../img/cartography_304by191.png") 0 no-repeat;
+}
+
 /* Lists
 ----------------------------------------*/
 
 /* Footer
 ----------------------------------------*/
+
+footer{
+	position:static;
+	background-color:#FFFFFF;
+	height:30px;
+}
