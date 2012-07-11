@@ -1,5 +1,12 @@
-function init() {
-    map = new OpenLayers.Map('map',{
+var map;
+if( !map ){
+	map = {};
+}else if( !map instanceof Object ){
+	throw new Error("map is already created and its not an object.");
+}
+
+map.init = function(){
+    var map = new OpenLayers.Map('map',{
     	projection:"EPSG:900913",
     	displayProjection:"EPSG:4326",
     	numZoomLevel: 18
@@ -27,6 +34,6 @@ function init() {
     map.addLayers([gphy, gmap, ghyb, gsat]);
 
     map.setCenter(new OpenLayers.LonLat(51.12, -114.234), 5);
-}
+};
 
-window.onload = init;
+

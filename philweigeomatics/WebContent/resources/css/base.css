@@ -45,7 +45,6 @@ nav a{
 	font-size: 14px;
 	text-decoration:none;
 	color:white;
-
 }
 
 span.title{
@@ -61,6 +60,24 @@ span.title{
 .hoverable_text_wrapper:hover{
 	cursor:pointer;
 	color: #00FF7F;
+}
+
+
+#myskills_switcher a{
+	margin:5px;
+	text-decoration:none;
+	color:#000000;
+	font-size:1.6em;
+	font-weight: bold;
+}
+
+#myskills_switcher a:hover{
+	text-decoration:underline;
+	color:#696969;
+}
+
+.justified_text{
+	text-align:justify;
 }
 
 /* Structure
@@ -109,14 +126,16 @@ div.container{
 }
 
 .barleft{
-	margin-right:2px;
+	text-align:right;
+	padding-right:2px;
 }
 
 .barright{
-	margin-left:2px;
+	text-align:left;
+	padding-left:2px
 }
 
-.big, .medium{
+.big, .medium, .small{
 	margin-bottom:15px;
 }
 
@@ -218,7 +237,7 @@ header div.wrapper{
 }
 
 header nav{
-	vertical-align:middle;
+	position:relative;
 	margin-top: 24px; /* 40 px total height of the header wrapper minus 14px of font + 1px of bottom*/
 }
 
@@ -233,6 +252,34 @@ header nav a:hover{
 header nav a.verticalbar:hover{
 	color: #FFFFFF;
 	cursor:default;
+}
+
+header nav div{
+	width:80px;
+}
+
+header nav div:hover > ul{
+	left:auto;
+	visibility:visible;
+}
+
+header nav div ul{
+	margin-top:2px;
+	position:absolute;
+	visibility:hidden;
+	background:#000000;
+	z-index:9999;
+	width:80px;
+	line-height:180%;
+	-webkit-transition:opacity 0.2s linear, visibility 0.2s linear;
+    -moz-transition:opacity 0.2s linear, visibility 0.2s linear;
+    -o-transition:opacity 0.2s linear, visibility 0.2s linear;
+    transition:opacity 0.2s linear, visibility 0.2s linear;
+    
+}
+
+header nav div ul li{
+	margin-left:5px;
 }
 
 
@@ -339,16 +386,51 @@ header nav a.verticalbar:hover{
 /*****      My Skills Area      ******/
 #myskills_left_container{
 	position:relative;
-	height:300px;
+	height:400px;
 	width:300px;
 }
-#myskills_title_wrapper{
+
+#myskills_left_wrapper{
+	position:absolute;
+	width:250px;
+	height:80px;
+	left:50%;
+	top:50%;
+	margin-top: -40px;
+	margin-left:-125px;
+}
+/*#myskills_title_wrapper{
 	position:absolute;
 	width:250px;
 	left:50%;
 	top:50%;
 	margin-top:-30px;
 	margin-left:-125px;
+}*/
+#myskills_iconmap_wrapper{
+	height:400px;
+	width:400px;
+}
+
+#myskills_text_wrapper{
+	height:400px;
+	width:200px;
+	background-color: #F4F4F4;
+	position:relative;
+}
+
+#myskills_text_wrapper p{
+	position:absolute;
+	padding-left:5px;
+	padding-right:5px;
+	vertical-align:middle;
+	top:50%;
+	margin-top:-25%;
+	text-align:justify;
+}
+
+.left_teeth_edged{
+	background: url("../img/left_teeth.png") 0 0 repeat-y;
 }
 
 /* Images
@@ -366,11 +448,11 @@ a img{
 }
 
 #thumbnail2{
-	background:url("../img/gsxr_w_helmet_tiny_100by64.jpg") 0 no-repeat;
+	background:url("../img/books100by64_thumbnail.jpg") 0 no-repeat;
 }
 
 #thumbnail3{
-	background:url("../img/gsxr_w_helmet_tiny_100by64.jpg") 0 no-repeat;
+	background:url("../img/movies_100by64.jpg") 0 no-repeat;
 }
 
 
@@ -399,7 +481,15 @@ a img{
 ----------------------------------------*/
 
 footer{
-	position:static;
-	background-color:#FFFFFF;
-	height:30px;
+	position:relative;
+	background-color: #FFFFFF;
+	border-top: 1px solid #F4F4F4;
+	height:50px;
+	text-align:center;
 }
+
+footer .inner{
+	height:100%;
+	line-height:50px;
+}
+

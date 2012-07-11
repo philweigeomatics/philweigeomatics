@@ -36,7 +36,17 @@
 	<!-- Script -->
     <script src="http://openlayers.org/api/OpenLayers.js"></script>
     <script src="http://maps.google.com/maps/api/js?v=3&amp;sensor=false"></script>
+    <script src="resources/js/jq.js"></script>
     <script src="resources/js/map.js"></script>
+    <script src="resources/js/site_behaviours.js"></script>
+    <script type="text/javascript"><!--//--><![CDATA[//><!--
+
+    window.onload = function(){
+    	map.init();
+    	siteInit();
+    }
+		
+		//--><!]]></script>
     
     <!-- line below to show a different page when javascript isn't enabled at the browser. /nojs file will be accessed if javascript is disabled -->
     <noscript><meta http-equiv="refresh" content="0;url=/nojs"></noscript>
@@ -49,10 +59,20 @@
 		<div class="wrapper"> <!-- The wrapper here makes the inner part margin autoable -->
 			<div class="inner">
 				<div id="title" class="leftfloat"><a href="http://www.linkedin.com/pub/phil-wei/17/61a/112">Phil Wei</a></div>
-				<nav class="rightfloat">
-					<a href="#" class="barleft">Resume</a>
+				<nav class="rightfloat clearfix">
+					<div class="leftfloat barleft">
+						<a href="#" >Resume</a>
+					</div>
 					<a href="#" class="verticalbar">|</a>
-					<a href="#" class="barright">Contact Phil</a>
+					<div class="rightfloat barright">
+						<a href="#">Contact Phil</a>
+						<ul>
+							<li><a href="#">Facebook</a></li>
+							<li><a href="#">Blogspot</a></li>
+							<li><a href="#">LinkedIn</a></li>
+							<li><a href="#">Twitter</a></li>
+						</ul>
+					</div>
 				</nav>
 			</div>
 		</div>	
@@ -71,7 +91,7 @@
 							</div>
 						</div>
 					</div>
-					<div id="myhobbies_text_wrapper">
+					<div id="myhobbies_text_wrapper" class="justified_text">
 						<div><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p></div>
 					</div>
 					<div id="myhobbies_images_collection">
@@ -91,7 +111,7 @@
 						</div>
 					</div>
 				</div>
-				<div id="myworks_text_wrapper">
+				<div id="myworks_text_wrapper" class="justified_text">
 					<div><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p></div>
 				</div>
 				<div id="myworks_images_wrapper">
@@ -105,21 +125,34 @@
 			</section>
 			<section class="framed small clearfix rounded_border shadowed_box_br">
 				<div id="myskills_left_container" class="leftfloat rounded_border">
-					<div id="myskills_title_wrapper" class="bg_bl">
-						<div class="bg_tl">
-							<div class="bg_tr">
-								<div class="bg_br"><span class="title hoverable_text_wrapper">What I am good at</span></div>
+					<div id="myskills_left_wrapper">
+						<div id="myskills_title_wrapper" class="bg_bl">
+							<div class="bg_tl">
+								<div class="bg_tr">
+									<div class="bg_br"><span class="title hoverable_text_wrapper">What I am good at</span></div>
+								</div>
 							</div>
+						</div>
+						<div id="myskills_switcher" class="clearfix">
+							<a href="#" class="leftfloat">Prev</a>
+							<a href="#" class="rightfloat">Next</a>
 						</div>
 					</div>
 				</div>
-				<div id="myskills_iconmap_wrapper" class="rightfloat">
+				<div id="myskills_text_wrapper" class="leftfloat justified_text">
+					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+				</div>
+				<div id="myskills_iconmap_wrapper" class="rightfloat rounded_border">
+					<img src="resources/img/iconset1.png" width="400" height="400" usemap="#iconSetMap" />
+					<map name="iconSetMap">
+						<area></area>
+					</map>
 				</div>
 			</section>
 		</div>	
 		<footer class="container">
 			<div class="inner">
-				This is footer
+				<h3>&copy; Tengfei Wei</h3>
 			</div>
 		</footer>
 	</div>
