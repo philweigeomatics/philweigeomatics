@@ -16,7 +16,7 @@ input,select,th,td{
 	font-size: 1em;
 }
 p{ 
-	font-size: 1.4em;
+	font-size: 1.2em;
 }
 h1{ font-size: 3.6em; font-weight:bold; }
 h2{ font-size: 2.4em; font-weight:bold;}
@@ -24,7 +24,7 @@ h3{ font-size: 2.0em; font-weight:bold;}
 h4{ font-size: 1.6em; }
 
 .big p, .medium p{
-	font-size: 1.6em;
+	font-size: 1.2em;
 	font-weight:bold;
 	line-height:180%;
 }
@@ -335,13 +335,28 @@ header nav div ul li{
 	position:absolute;
 	width:314px;
 	top: 100px;
+	height:200px;
 }
 
 #myhobbies_text_wrapper div{
 	margin:auto;
 	width:300px;
+	height:100%;
+	overflow-y:auto;
+	overflow-x:auto;
+	
 }
 
+/*
+#myhobbies_text_wrapper div:hover{
+	cursor:pointer;
+}*/
+
+#myhobbies_text_wrapper div p{
+	text-indent: 2em;
+	text-overflow:ellipsis;
+	-o-text-overflow:ellipsis;
+}
 #myhobbies_images_collection{
 	position:absolute;
 	bottom: 0;
