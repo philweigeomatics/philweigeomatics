@@ -20,10 +20,12 @@ map.init = function(){
         }
     );
     
+    
     var gmap = new OpenLayers.Layer.Google(
         "Google Streets", // the default
         {
-        	numZoomLevels:20
+        	sphericalMercator:true,
+        	displayInLayerSwitcher: false
         }
     );
     var ghyb = new OpenLayers.Layer.Google(
@@ -37,6 +39,8 @@ map.init = function(){
 
 
     map.addLayers([gphy, gmap, ghyb, gsat]);
+    
+    gphy.setOpacity(0.5);
     map.setCenter(new OpenLayers.LonLat(-114.234, 51.12 ), 5);
 };
 
