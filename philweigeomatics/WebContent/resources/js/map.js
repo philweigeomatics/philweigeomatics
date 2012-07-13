@@ -15,11 +15,16 @@ map.init = function(){
     
     var gphy = new OpenLayers.Layer.Google(
         "Google Physical",
-        {type: google.maps.MapTypeId.TERRAIN}
+        {
+        	type: google.maps.MapTypeId.TERRAIN
+        }
     );
+    
     var gmap = new OpenLayers.Layer.Google(
         "Google Streets", // the default
-        {numZoomLevels:20}
+        {
+        	numZoomLevels:20
+        }
     );
     var ghyb = new OpenLayers.Layer.Google(
         "Google Hybrid",
@@ -32,8 +37,7 @@ map.init = function(){
 
 
     map.addLayers([gphy, gmap, ghyb, gsat]);
-
-    map.setCenter(new OpenLayers.LonLat(51.12, -114.234), 5);
+    map.setCenter(new OpenLayers.LonLat(-114.234, 51.12 ), 5);
 };
 
 
