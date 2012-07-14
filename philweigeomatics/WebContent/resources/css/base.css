@@ -25,15 +25,10 @@ h4{ font-size: 1.6em; }
 
 .big p, .medium p{
 	font-size: 1.2em;
-	font-weight:bold;
+	font-weight: normal;
 	line-height:180%;
 }
 
-.medium p{
-	font-size: 1.4em;
-	font-weight:bold;
-	line-height:150%;
-}
 
 .small p{
 	font-size: 1.2em;
@@ -63,6 +58,25 @@ span.title{
 }
 
 
+.content_text_wrapper div p{
+	text-indent: 2em;
+	text-overflow:ellipsis;
+	-o-text-overflow:ellipsis;
+}
+
+.content_text_wrapper p a{
+	text-decoration: none;
+	color:#666666;
+}
+
+.content_text_wrapper p a:hover{
+	text-decoration: underline;
+}
+
+.content_text_wrapper p a:visited{
+	color:#666666;
+	text-decoration:none;
+}
 #myskills_switcher a{
 	margin:5px;
 	text-decoration:none;
@@ -79,6 +93,26 @@ span.title{
 .justified_text{
 	text-align:justify;
 }
+
+.strong{
+	font-weight:bold;
+}
+
+.em{
+	font-style:italic;
+}
+
+span.initword{
+	display:none;
+}
+
+#GIS_def{
+	background-image: url("../img/GIS_textindent.png");
+	background-repeat: no-repeat;
+	background-position: 30px -5px; 
+	text-indent: 55px;
+}
+
 
 /* Structure
 ----------------------------------------*/
@@ -347,16 +381,6 @@ header nav div ul li{
 	
 }
 
-/*
-#myhobbies_text_wrapper div:hover{
-	cursor:pointer;
-}*/
-
-#myhobbies_text_wrapper div p{
-	text-indent: 2em;
-	text-overflow:ellipsis;
-	-o-text-overflow:ellipsis;
-}
 #myhobbies_images_collection{
 	position:absolute;
 	bottom: 0;
@@ -395,7 +419,6 @@ header nav div ul li{
 	line-height:150%;
 	padding-left:10px;
 	padding-right:10px;
-	height:100px;
 }
 
 /*****      My Skills Area      ******/
@@ -486,7 +509,7 @@ a img{
 }
 
 #myworks_img3{
-	background:url("../img/cartography_304by191.png") 0 no-repeat;
+	background:url("../img/OSM_Editing_304by191.png") 0 no-repeat;
 }
 
 /* Lists

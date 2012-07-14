@@ -17,5 +17,10 @@ en_ca.myhobbies = {
 };
 
 en_ca.myworks = {
-		
+		gis: "<p>GIS stands Geographic Information System, that is used to deal with geospatial data in a variety of methods and in many different kinds of representations."+
+		"GIS is being used in many different applications and industries. There are also many GISs available nowadays including the industry-leading Arc Suite developed by <a href=\"http://www.esri.com\">ESRI</a>; they provide a set of relatively complete solutions for all types of Geospatial Information related works but since they target enterprise solutions, they are hardly affordable by smaller teams."+
+		"There are also open souce or free GISs available such as <a href=\"http://www.qgis.org\">Quantum GIS (Open Source)</a>, <a href=\"http://grass.fbk.eu\">Grass GIS (Open Source)</a>, <a href=\"http://www.openjump.org\">Open Jump (Open Source)</a> and so on." +
+		"More and more applications being developed with Spatial Information built-in. With the evolution of mobile technologies, a terminology named <a href=\"http://en.wikipedia.org/wiki/Location-based_servic\">LBS (Location Based Services)</a> has been widely adopted by mobile applications. </p>"+
+		"<p><a href=\"http://http://www.openstreetmap.org\">&#34;Open Street Map (OSM)</a> is a collaborative project to create a free editable map of the world.&#34; This is the definition to <a href=\"http://http://www.openstreetmap.org\">&#34;Open Street map</a> provided by wikipedia. The map can be edited and the data can be collected by everyone. It highly utilized the public power and it leads a benefit that the map data is completely free to use. The opposite side is that the data accuracy is not guaranteed."+
+		"I have been an active OSM participant since 2011 to contribute to the project and the data I have contributed to has been mainly in Alberta area.</p> "
 };
