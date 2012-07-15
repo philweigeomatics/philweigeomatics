@@ -35,10 +35,11 @@
     
 	<!-- Script -->
     <script src="http://openlayers.org/api/OpenLayers.js"></script>
-    <script src="http://maps.google.com/maps/api/js?v=3&amp;sensor=false"></script>
+    <script src="http://maps.google.com/maps/api/js?key=AIzaSyByi6c-Mdf9owKlnK-AvmznfuYFUH1Org4&sensor=false"></script>
     <script src="resources/js/jq.js"></script>
     <script src="resources/js/map.js"></script>
     <script src="resources/js/strings.js"></script>
+    <script src="resources/js/skillmap.js"></script>
     <script src="resources/js/site_behaviours.js"></script>
     <script type="text/javascript"><!--//--><![CDATA[//><!--
 
@@ -144,18 +145,19 @@
 							</div>
 						</div>
 						<div id="myskills_switcher" class="clearfix">
-							<a href="#" class="leftfloat">Prev</a>
-							<a href="#" class="rightfloat">Next</a>
+							<a class="leftfloat">Prev</a>
+							<a class="rightfloat">Next</a>
 						</div>
 					</div>
 				</div>
 				<div id="myskills_text_wrapper" class="leftfloat justified_text">
-					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+					<div>		
+					</div>
 				</div>
 				<div id="myskills_iconmap_wrapper" class="rightfloat rounded_border">
 					<img src="resources/img/iconset1.png" width="400" height="400" usemap="#iconSetMap" />
 					<map name="iconSetMap">
-						<area></area>
+						<!--  area will be appended here -->
 					</map>
 				</div>
 			</section>

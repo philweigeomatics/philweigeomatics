@@ -6,12 +6,14 @@ if( !map ){
 }
 
 map.init = function(){
+	
+	// the map is an OpenLayers map object.
     var map = new OpenLayers.Map('map',{
     	projection:"EPSG:900913",
-    	displayProjection:"EPSG:4326",
+    	displayProjection:"EPSG:4326", // setting what projection the mouse coordinates will be, but 900913 is actually spherical mercator.
     	numZoomLevel: 18
     });
-    map.addControl(new OpenLayers.Control.LayerSwitcher());
+   
     
     var gphy = new OpenLayers.Layer.Google(
         "Google Physical",
@@ -25,12 +27,13 @@ map.init = function(){
         "Google Streets", // the default
         {
         	sphericalMercator:true,
-        	displayInLayerSwitcher: false
+        	displayInLayerSwitcher: true,
+        	attribution:"haha"
         }
     );
     var ghyb = new OpenLayers.Layer.Google(
         "Google Hybrid",
-        {type: google.maps.MapTypeId.HYBRID, numZoomLevels: 20}
+        {type: google.maps.MapTypeId.HYBRID, numZoomLevels: 10 }
     );
     var gsat = new OpenLayers.Layer.Google(
         "Google Satellite",
@@ -39,9 +42,12 @@ map.init = function(){
 
 
     map.addLayers([gphy, gmap, ghyb, gsat]);
+    map.addControl(new OpenLayers.Control.LayerSwitcher());
+//    gphy.setOpacity(0.5);
+    map.setCenter(new OpenLayers.LonLat(-114.01234,51.0235).transform("EPSG:4326","EPSG:900913"), 7);
     
-    gphy.setOpacity(0.5);
-    map.setCenter(new OpenLayers.LonLat(-114.234, 51.12 ), 5);
+    // assigning the map object to another reference that can be accessed elsewhere.
+    window.map.Map = map;
 };
 
 

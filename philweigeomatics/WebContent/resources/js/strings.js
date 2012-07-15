@@ -24,3 +24,4 @@ en_ca.myworks = {
 		"<p><a href=\"http://http://www.openstreetmap.org\">&#34;Open Street Map (OSM)</a> is a collaborative project to create a free editable map of the world.&#34; This is the definition to <a href=\"http://http://www.openstreetmap.org\">&#34;Open Street map</a> provided by wikipedia. The map can be edited and the data can be collected by everyone. It highly utilized the public power and it leads a benefit that the map data is completely free to use. The opposite side is that the data accuracy is not guaranteed."+
 		"I have been an active OSM participant since 2011 to contribute to the project and the data I have contributed to has been mainly in Alberta area.</p> "
 };
+

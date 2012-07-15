@@ -83,6 +83,7 @@ span.title{
 	color:#000000;
 	font-size:1.6em;
 	font-weight: bold;
+	cursor:pointer;
 }
 
 #myskills_switcher a:hover{
@@ -437,14 +438,7 @@ header nav div ul li{
 	margin-top: -40px;
 	margin-left:-125px;
 }
-/*#myskills_title_wrapper{
-	position:absolute;
-	width:250px;
-	left:50%;
-	top:50%;
-	margin-top:-30px;
-	margin-left:-125px;
-}*/
+
 #myskills_iconmap_wrapper{
 	height:400px;
 	width:400px;
@@ -457,7 +451,15 @@ header nav div ul li{
 	position:relative;
 }
 
-#myskills_text_wrapper p{
+#myskills_text_wrapper div{
+	position:absolute;
+	top:50%;
+	padding-left:5px;
+	padding-right:5px;
+	text-align:justify;
+}
+
+/*#myskills_text_wrapper p{
 	position:absolute;
 	padding-left:5px;
 	padding-right:5px;
@@ -465,7 +467,7 @@ header nav div ul li{
 	top:50%;
 	margin-top:-25%;
 	text-align:justify;
-}
+}*/
 
 .left_teeth_edged{
 	background: url("../img/left_teeth.png") 0 0 repeat-y;
