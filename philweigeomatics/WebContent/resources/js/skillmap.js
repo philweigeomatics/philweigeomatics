@@ -85,7 +85,7 @@ skillmap.javascriptFrameworksAPI = {
 	
 	i = 0;
 	for( title in skillmap.javascriptFrameworksAPI.titleArray ){
-		var tr = skillmap.javaFrameworksAPI.titleArray;
+		var tr = skillmap.javascriptFrameworksAPI.titleArray;
 		skillmap.javascriptFrameworksAPI.area.push( "<area shape=\"rect\" coords=\""+skillmap.coords[i]+"\" alt=\""+tr[title]+"\" title=\""+tr[title]+"\"/>");
 		i++;
 	}

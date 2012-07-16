@@ -1,0 +1,25 @@
+{
+	"type":"FeatureCollection",
+	"features":[
+		{
+			"id":"MapLayer_10",
+			"type":"Feature",
+			"properties":{
+			},
+			"geometry":{
+							"type":"Point",
+							"coordinates":[112.551745, 37.871627 ]
+						}
+		},
+		{
+			"id":"MapLayer_11",
+			"type":"Feature",
+			"properties":{
+			},
+			"geometry":{
+				"type":"Point",
+				"coordinates":[116.403765, 39.908061 ]
+			}
+		}
+	]
+}
