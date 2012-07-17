@@ -134,6 +134,7 @@ div.container{
 	margin-left:auto;
 	margin-right:auto;
 	width:916px;
+	z-index:9999;
 }
 .leftfloat{
 	float:left;
@@ -322,7 +323,7 @@ header nav div ul li{
 ----------------------------------------*/
 #mapWrapper{
 	margin-top:40px;
-	height:400px;
+	height:360px;
 }
 
 #map{

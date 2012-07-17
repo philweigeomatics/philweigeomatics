@@ -6,7 +6,9 @@
 			"type":"Feature",
 			"properties":{
 				"city":"Taiyuan",
-				"forPhil":"Home Town"
+				"forPhil":"Home Town",
+				"label":"Home Town",
+				"type":"hometown"
 			},
 			"geometry":{
 							"type":"Point",
@@ -18,7 +20,9 @@
 			"type":"Feature",
 			"properties":{
 				"city":"Beijing",
-				"forPhil":"Went to High School"
+				"forPhil":"Went to High School",
+				"label":"High School",
+				"type":"visited"
 			},
 			"geometry":{
 				"type":"Point",
@@ -30,11 +34,13 @@
 			"type":"Feature",
 			"properties":{
 				"city":"Calgary",
-				"forPhil":"Went to University and currently live"
+				"forPhil":"Went to University and currently live",
+				"label":"Reside",
+				"type":"reside"
 			},
 			"geometry":{
 				"type":"Point",
-				"coordinates":[]
+				"coordinates":[ -114.056511, 51.046523 ]
 			}
 		},
 		{
@@ -42,11 +48,13 @@
 			"type":"Feature",
 			"properties":{
 				"city":"Banff",
-				"forPhil":"Went there more than 20 times to simply just relax"
+				"forPhil":"Went there more than 20 times to simply just relax",
+				"label":"Banff",
+				"type":"visited"
 			},
 			"geometry":{
 				"type":"Point",
-				"coordinates":[]
+				"coordinates":[-115.572050, 51.178089]
 			}
 		},
 		{
@@ -54,11 +62,13 @@
 			"type":"Feature",
 			"properties":{
 				"city":"Quebec City",
-				"forPhil":"Loves the city, especially the food"
+				"forPhil":"Loves the city, especially the food",
+				"label":"Quebec City",
+				"type":"visited"
 			},
 			"geometry":{
 				"type":"Point",
-				"coordinates":[]
+				"coordinates":[ -71.24095, 46.79711 ]
 			}
 		},
 		{
@@ -66,11 +76,13 @@
 			"type":"Feature",
 			"properties":{
 				"city":"Vancouver",
-				"forPhil":"Went there more than 10 times to satisfy the craving for some good chinese food"
+				"forPhil":"Went there more than 10 times to satisfy the craving for some good chinese food",
+				"label":"Vancouver",
+				"type":"visited"
 			},
 			"geometry":{
 				"type":"Point",
-				"coordinates":[]
+				"coordinates":[-123.113927, 49.261226 ]
 			}
 		},
 		{
@@ -78,11 +90,27 @@
 			"type":"Feature",
 			"properties":{
 				"city":"Kelowna",
-				"forPhil":"Loves the view, wine, and the 25 cents per hour downtown parking"
+				"forPhil":"Loves the view, wine, and the 25 cents per hour downtown parking",
+				"label":"Kelowna",
+				"type":"visited"
 			},
 			"geometry":{
 				"type":"Point",
-				"coordinates":[]
+				"coordinates":[-119.496011, 49.887952 ]
+			}
+		},
+		{
+			"id":"MapLayer_18",
+			"type":"Feature",
+			"properties":{
+				"city":"Jasper",
+				"forPhil":"Did my first ski-trip over there. It was scary but it is such a beautiful city!",
+				"label":"Jasper",
+				"type":"visited"
+			},
+			"geometry":{
+				"type":"Point",
+				"coordinates":[-118.079256,52.879277]
 			}
 		}
 	]
