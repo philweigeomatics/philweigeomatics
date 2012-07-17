@@ -2,9 +2,11 @@
 	"type":"FeatureCollection",
 	"features":[
 		{
-			"id":"MapLayer_10",
+			"id":"MapLayer_11",
 			"type":"Feature",
 			"properties":{
+				"city":"Taiyuan",
+				"forPhil":"Home Town"
 			},
 			"geometry":{
 							"type":"Point",
@@ -12,13 +14,75 @@
 						}
 		},
 		{
-			"id":"MapLayer_11",
+			"id":"MapLayer_12",
 			"type":"Feature",
 			"properties":{
+				"city":"Beijing",
+				"forPhil":"Went to High School"
 			},
 			"geometry":{
 				"type":"Point",
 				"coordinates":[116.403765, 39.908061 ]
+			}
+		},
+		{
+			"id":"MapLayer_13",
+			"type":"Feature",
+			"properties":{
+				"city":"Calgary",
+				"forPhil":"Went to University and currently live"
+			},
+			"geometry":{
+				"type":"Point",
+				"coordinates":[]
+			}
+		},
+		{
+			"id":"MapLayer_14",
+			"type":"Feature",
+			"properties":{
+				"city":"Banff",
+				"forPhil":"Went there more than 20 times to simply just relax"
+			},
+			"geometry":{
+				"type":"Point",
+				"coordinates":[]
+			}
+		},
+		{
+			"id":"MapLayer_15",
+			"type":"Feature",
+			"properties":{
+				"city":"Quebec City",
+				"forPhil":"Loves the city, especially the food"
+			},
+			"geometry":{
+				"type":"Point",
+				"coordinates":[]
+			}
+		},
+		{
+			"id":"MapLayer_16",
+			"type":"Feature",
+			"properties":{
+				"city":"Vancouver",
+				"forPhil":"Went there more than 10 times to satisfy the craving for some good chinese food"
+			},
+			"geometry":{
+				"type":"Point",
+				"coordinates":[]
+			}
+		},
+		{
+			"id":"MapLayer_17",
+			"type":"Feature",
+			"properties":{
+				"city":"Kelowna",
+				"forPhil":"Loves the view, wine, and the 25 cents per hour downtown parking"
+			},
+			"geometry":{
+				"type":"Point",
+				"coordinates":[]
 			}
 		}
 	]

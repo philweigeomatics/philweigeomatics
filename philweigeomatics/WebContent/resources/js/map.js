@@ -48,7 +48,7 @@ map.init = function(){
 
    
     // add base layer 
-    map.addLayers([ gmap, ghyb ]);
+    map.addLayers([ ghyb ]);
     
     var in_options = {
             'internalProjection': map.baseLayer.projection,
@@ -99,67 +99,11 @@ map.featureIds = {
 		ferrariWorld:"MapLayer_1",
 		gatesHouse:"MapLayer_2",
 		eiffelTower:"MapLayer_3",
-		nurburgring:"MapLayer_4"
+		theBahamas:"MapLayer_4",
+		taiwan:"MapLayer_5",
+		tokyo:"MapLayer_6",
+		nurburgring:"MapLayer_7",
+		silliconValley:"MapLayer_8",
+		london:"MapLayer_9",
+		amazon:"MapLayer_10"
 };
-
-map.tripPlans = {
-	"type":"FeatureCollection",
-	"features":[
-		{
-			"id":"MapLayer_1",
-			"type":"Feature",
-			"properties":{
-				"city":"Abu Dhabi",
-				"interest": "Ferrari World",
-				"link": "http://www.ferrariworldabudhabi.com/",
-				"forPhil": "See the Ferrari World"
-			},
-			"geometry":{
-							"type":"Point",
-							"coordinates":[54.607126,24.483738]
-						}
-		},
-		{
-			"id":"MapLayer_2",
-			"type":"Feature",
-			"properties":{
-				"city":"Medina, Washington",
-				"interest": "Bill Gates House",
-				"link":"http://en.wikipedia.org/wiki/Bill_Gates'_house",
-				"forPhil":"Talk to him before he dies"
-			},
-			"geometry":{
-				"type":"Point",
-				"coordinates":[-122.243204,47.624908]
-			}
-		}
-	],
-	"use":"Layer",
-	"name":"Trip Plans"
-};
-
-map.arrived = {
-			"type":"FeatureCollection",
-			"features":[
-				{
-					"id":"MapLayer_10",
-					"type":"Feature",
-					"properties":{
-					},
-					"geometry":{
-									"type":"Point",
-									"coordinates":[112.551745, 37.871627 ]
-								}
-				},
-				{
-					"id":"MapLayer_11",
-					"type":"Feature",
-					"properties":{
-					},
-					"geometry":{
-						"type":"Point",
-						"coordinates":[116.403765, 39.908061 ]
-					}
-				}
-			]
-		};

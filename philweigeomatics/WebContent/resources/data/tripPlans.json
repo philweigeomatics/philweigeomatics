@@ -28,6 +28,118 @@
 				"type":"Point",
 				"coordinates":[-122.243204,47.624908]
 			}
+		},
+		{
+			"id":"MapLayer_3",
+			"type":"Feature",
+			"properties":{
+				"city":"Paris",
+				"interest":"Eiffel Tower",
+				"link":"http://en.wikipedia.org/wiki/Eiffel_Tower",
+				"forPhil":"A helicopter takes me up to the top and live in Paris for a few months"
+			},
+			"geometry":{
+				"type":"Point",
+				"coordinates":[2.294453, 48.858152]
+			}
+		},
+		{
+			"id":"MapLayer_4",
+			"type":"Feature",
+			"properties":{
+				"city":"The Bahamas",
+				"interest":"Ocean and Islands",
+				"link":"http://en.wikipedia.org/wiki/The_Bahamas",
+				"forPhil":"Diving around different islands"
+			},
+			"geometry":{
+				"type":"Point",
+				"coordinates":[-77.928487, 24.510928]
+			}
+		},
+		{
+			"id":"MapLayer_5",
+			"type":"Feature",
+			"properties":{
+				"city":"Taiwan",
+				"interest":"The food culture",
+				"link":"http://taiwanfoodculture.net/",
+				"forPhil":"Eat. Live for couple months so I can eat as much as possible."
+			},
+			"geometry":{
+				"type":"Point",
+				"coordinates":[120.933441, 23.623741 ]
+			}
+		},
+		{
+			"id":"MapLayer_6",
+			"type":"Feature",
+			"properties":{
+				"city":"Tokyo",
+				"interest":"The Japanese Culture",
+				"link":"http://en.wikipedia.org/wiki/Tokyo",
+				"forPhil":"Live for a few months in this one of the most advanced cities in the world"
+			},
+			"geometry":{
+				"type":"Point",
+				"coordinates":[139.691384, 35.686481]
+			}
+		},
+		{
+			"id":"MapLayer_7",
+			"type":"Feature",
+			"properties":{
+				"city":"Nurburg",
+				"interest":"Nurburgring",
+				"link":"http://en.wikipedia.org/wiki/N%C3%BCrburgring",
+				"forPhil":"Race on this one of the best race tracks in the world"
+			},
+			"geometry":{
+				"type":"Point",
+				"coordinates":[6.950531, 50.335781]
+			}
+		},
+		{
+			"id":"MapLayer_8",
+			"type":"Feature",
+			"properties":{
+				"city":"San Francisco Bay Area",
+				"interest":"Sillicon Valley",
+				"link":"http://en.wikipedia.org/wiki/Silicon_Valley",
+				"forPhil":"Work there for a few years"
+			},
+			"geometry":{
+				"type":"Point",
+				"coordinates":[-122.107935,37.417279]
+			}
+		},
+		{
+			"id":"MapLayer_9",
+			"type":"Feature",
+			"properties":{
+				"city":"London",
+				"interest":"The city",
+				"link":"http://en.wikipedia.org/wiki/London",
+				"forPhil":"Visit the top city in the world"
+			},
+			"geometry":{
+				"type":"Point",
+				"coordinates":[-81.244361, 42.984207]
+			}
+		},
+		{
+			"id":"MapLayer_10",
+			"type":"Feature",
+			"properties":{
+				"city":"Manaus",
+				"interest":"Amazon Rainforest",
+				"link":"http://en.wikipedia.org/wiki/Amazon_rainforest",
+				"forPhil":"Explore the forest, with a RangeRover if possible"
+			},
+			"geometry":{
+				"type":"Point",
+				"coordinates":[-60.022129,-3.112975]
+			}
 		}
 	],
 	"use":"Layer",
