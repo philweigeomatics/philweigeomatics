@@ -37,12 +37,11 @@
     <script src="http://openlayers.org/api/OpenLayers.js"></script>
     <script src="http://maps.google.com/maps/api/js?key=AIzaSyByi6c-Mdf9owKlnK-AvmznfuYFUH1Org4&sensor=false"></script>
     <script src="resources/js/jq.js"></script>
+    <script src="resources/js/utils.js"></script>
     <script src="resources/js/map.js"></script>
     <script src="resources/js/strings.js"></script>
     <script src="resources/js/skillmap.js"></script>
     <script src="resources/js/site_behaviours.js"></script>
-    <script src="resources/js/asciiTable.js"></script>
-    <script src="resources/js/trip_goals.js"></script>
     <script type="text/javascript"><!--//--><![CDATA[//><!--
 
     window.onload = function(){
@@ -53,7 +52,21 @@
 		//--><!]]></script>
     
     <!-- line below to show a different page when javascript isn't enabled at the browser. /nojs file will be accessed if javascript is disabled -->
-    <noscript><meta http-equiv="refresh" content="0;url=/nojs"></noscript>
+    <noscript><meta http-equiv="refresh" content="0;url=nojs.html"></noscript>
+    
+    <script type="text/javascript">
+
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-33473712-1']);
+	  _gaq.push(['_trackPageview']);
+	
+	  (function() {
+	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+	
+	</script>
 </head>
 <body>
 	<header id="wrapper" class="clearfix container">
@@ -66,17 +79,19 @@
 				<div id="title" class="leftfloat"><a href="http://www.linkedin.com/pub/phil-wei/17/61a/112">Phil Wei</a></div>
 				<nav class="rightfloat clearfix">
 					<div class="leftfloat barleft">
-						<a href="#" >Resume</a>
+						<a href="mailto:philweigeomatics@gmail.com?Subject=Hello%20Phil" >Email Phil</a>
 					</div>
-					<a href="#" class="verticalbar">|</a>
+					<div class="leftfloat" style="width:2px; margin-left:1px; margin-right:1px"><a href="#" class="verticalbar">|</a></div> 
 					<div class="rightfloat barright">
 						<!--  TODO: Rework this Contact Phil section. Doesn't work well on both IE and Chrome -->
-						<a href="#">Contact Phil</a>
+						<a href="#">Link Phil</a>
 						<ul>
-							<li><a href="#">Facebook</a></li>
-							<li><a href="#">Blogspot</a></li>
-							<li><a href="#">LinkedIn</a></li>
-							<li><a href="#">Twitter</a></li>
+							<li id="fb"><a href="http://www.facebook.com/phil.wei.77">Facebook</a></li>
+							<li id="blogger"><a href="http://philweigeomatics.blogspot.ca/">Blogspot</a></li>
+							<li id="ll" ><a href="http://www.linkedin.com/pub/phil-wei/17/61a/112">LinkedIn</a></li>
+							<li id="twitter"><a href="https://twitter.com/philweigeomatic">Twitter</a></li>
+							<li id="gplus"><a href="https://plus.google.com/u/0/103650587613645829354/">Google&#43;</a></li>
+							<li><a href="http://philweigeomatics.com/old" class="background_red" title="will be dropped soon">Old Site</a><li>
 						</ul>
 					</div>
 				</nav>

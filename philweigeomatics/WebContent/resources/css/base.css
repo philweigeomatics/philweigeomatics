@@ -115,6 +115,16 @@ span.initword{
 }
 
 
+#map table th{
+	text-align: center;
+	font-size: 1.5em;	
+}
+
+#map table td{
+	text-indent: 1em;
+	font-size: 1.5em;
+}
+
 /* Structure
 ----------------------------------------*/
 .container{
@@ -292,6 +302,7 @@ header nav a.verticalbar:hover{
 
 header nav div{
 	width:80px;
+	display:inline;
 }
 
 header nav div:hover > ul{
@@ -306,7 +317,7 @@ header nav div ul{
 	background:#000000;
 	z-index:9999;
 	width:80px;
-	line-height:180%;
+	/*line-height:180%;*/
 	-webkit-transition:opacity 0.2s linear, visibility 0.2s linear;
     -moz-transition:opacity 0.2s linear, visibility 0.2s linear;
     -o-transition:opacity 0.2s linear, visibility 0.2s linear;
@@ -315,8 +326,35 @@ header nav div ul{
 }
 
 header nav div ul li{
+	height:16px;
 	margin-left:5px;
 }
+
+header nav div ul li a{
+	margin-left: 16px;
+}
+
+header nav div ul #fb{
+	background:url('../img/iconset_social.png') no-repeat 0 0;
+}
+
+header nav div ul #blogger{
+	background:url('../img/iconset_social.png') no-repeat 0 -16px;
+}
+
+header nav div ul #ll{
+	background:url('../img/iconset_social.png') no-repeat 0 -32px;
+}
+
+header nav div ul #twitter{
+	background:url('../img/iconset_social.png') no-repeat 0 -48px;
+}
+
+header nav div ul #gplus{
+	background:url('../img/iconset_social.png') no-repeat 0 -64px;
+}
+
+
 
 
 /* Map
@@ -329,6 +367,10 @@ header nav div ul li{
 #map{
 	width:100%;
 	height:100%;
+}
+
+#map table th{
+	
 }
 
 

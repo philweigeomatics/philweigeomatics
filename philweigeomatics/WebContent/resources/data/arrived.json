@@ -6,7 +6,7 @@
 			"type":"Feature",
 			"properties":{
 				"city":"Taiyuan",
-				"forPhil":"Home Town",
+				"forPhil":"This is Phil&#39;s home town",
 				"label":"Home Town",
 				"type":"hometown"
 			},
@@ -20,7 +20,7 @@
 			"type":"Feature",
 			"properties":{
 				"city":"Beijing",
-				"forPhil":"Went to High School",
+				"forPhil":"Phil went to High School in Beijing",
 				"label":"High School",
 				"type":"visited"
 			},
@@ -34,7 +34,7 @@
 			"type":"Feature",
 			"properties":{
 				"city":"Calgary",
-				"forPhil":"Went to University and currently live",
+				"forPhil":"Phil went to University and currently live here",
 				"label":"Reside",
 				"type":"reside"
 			},
@@ -48,7 +48,7 @@
 			"type":"Feature",
 			"properties":{
 				"city":"Banff",
-				"forPhil":"Went there more than 20 times to simply just relax",
+				"forPhil":"Phil has been there more than 20 times to simply just relax",
 				"label":"Banff",
 				"type":"visited"
 			},
@@ -62,7 +62,7 @@
 			"type":"Feature",
 			"properties":{
 				"city":"Quebec City",
-				"forPhil":"Loves the city, especially the food",
+				"forPhil":"Phil loved the city, especially the food",
 				"label":"Quebec City",
 				"type":"visited"
 			},
@@ -76,7 +76,7 @@
 			"type":"Feature",
 			"properties":{
 				"city":"Vancouver",
-				"forPhil":"Went there more than 10 times to satisfy the craving for some good chinese food",
+				"forPhil":"Phil has been there more than 10 times to satisfy the craving for some good chinese food",
 				"label":"Vancouver",
 				"type":"visited"
 			},
@@ -90,7 +90,7 @@
 			"type":"Feature",
 			"properties":{
 				"city":"Kelowna",
-				"forPhil":"Loves the view, wine, and the 25 cents per hour downtown parking",
+				"forPhil":"Phil loved the view, wine, and the 25 cents per hour downtown parking",
 				"label":"Kelowna",
 				"type":"visited"
 			},
@@ -104,7 +104,7 @@
 			"type":"Feature",
 			"properties":{
 				"city":"Jasper",
-				"forPhil":"Did my first ski-trip over there. It was scary but it is such a beautiful city!",
+				"forPhil":"Phil did his first ski-trip over there. It was scary but it is such a beautiful city!",
 				"label":"Jasper",
 				"type":"visited"
 			},

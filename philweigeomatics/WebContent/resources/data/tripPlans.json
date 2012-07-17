@@ -8,7 +8,8 @@
 				"city":"Abu Dhabi",
 				"interest": "Ferrari World",
 				"link": "http://www.ferrariworldabudhabi.com/",
-				"forPhil": "See the Ferrari World"
+				"forPhil": "See the Ferrari World",
+				"linkType":"website"
 			},
 			"geometry":{
 							"type":"Point",
@@ -22,7 +23,8 @@
 				"city":"Medina",
 				"interest": "Bill Gates House",
 				"link":"http://en.wikipedia.org/wiki/Bill_Gates'_house",
-				"forPhil":"Talk to him before he dies"
+				"forPhil":"Talk to him before he dies",
+				"linkType":"wikipedia"
 			},
 			"geometry":{
 				"type":"Point",
@@ -36,7 +38,8 @@
 				"city":"Paris",
 				"interest":"Eiffel Tower",
 				"link":"http://en.wikipedia.org/wiki/Eiffel_Tower",
-				"forPhil":"A helicopter takes me up to the top and live in Paris for a few months"
+				"forPhil":"A helicopter takes me up to the top and live in Paris for a few months",
+				"linkType":"wikipedia"
 			},
 			"geometry":{
 				"type":"Point",
@@ -50,7 +53,8 @@
 				"city":"The Bahamas",
 				"interest":"Ocean and Islands",
 				"link":"http://en.wikipedia.org/wiki/The_Bahamas",
-				"forPhil":"Diving around different islands"
+				"forPhil":"Diving around different islands",
+				"linkType":"wikipedia"
 			},
 			"geometry":{
 				"type":"Point",
@@ -64,7 +68,8 @@
 				"city":"Taiwan",
 				"interest":"The food culture",
 				"link":"http://taiwanfoodculture.net/",
-				"forPhil":"Eat. Live for couple months so I can eat as much as possible."
+				"forPhil":"Eat. Live for couple months so I can eat as much as possible.",
+				"linkType":"website"
 			},
 			"geometry":{
 				"type":"Point",
@@ -78,7 +83,8 @@
 				"city":"Tokyo",
 				"interest":"The Japanese Culture",
 				"link":"http://en.wikipedia.org/wiki/Tokyo",
-				"forPhil":"Live for a few months in this one of the most advanced cities in the world"
+				"forPhil":"Live for a few months in this one of the most advanced cities in the world",
+				"linkType":"wikipedia"
 			},
 			"geometry":{
 				"type":"Point",
@@ -92,7 +98,8 @@
 				"city":"Nurburg",
 				"interest":"Nurburgring",
 				"link":"http://en.wikipedia.org/wiki/N%C3%BCrburgring",
-				"forPhil":"Race on this one of the best race tracks in the world"
+				"forPhil":"Race on this one of the best race tracks in the world",
+				"linkType":"wikipedia"
 			},
 			"geometry":{
 				"type":"Point",
@@ -106,7 +113,8 @@
 				"city":"San Francisco",
 				"interest":"Sillicon Valley",
 				"link":"http://en.wikipedia.org/wiki/Silicon_Valley",
-				"forPhil":"Work there for a few years"
+				"forPhil":"Work there for a few years",
+				"linkType":"wikipedia"
 			},
 			"geometry":{
 				"type":"Point",
@@ -120,11 +128,12 @@
 				"city":"London",
 				"interest":"The city",
 				"link":"http://en.wikipedia.org/wiki/London",
-				"forPhil":"Visit the top city in the world"
+				"forPhil":"Visit the top city in the world",
+				"linkType":"wikipedia"
 			},
 			"geometry":{
 				"type":"Point",
-				"coordinates":[-81.244361, 42.984207]
+				"coordinates":[-0.1267, 51.507478]
 			}
 		},
 		{
@@ -134,7 +143,8 @@
 				"city":"Manaus",
 				"interest":"Amazon Rainforest",
 				"link":"http://en.wikipedia.org/wiki/Amazon_rainforest",
-				"forPhil":"Explore the forest, with a RangeRover if possible"
+				"forPhil":"Explore the forest, with a RangeRover if possible",
+				"linkType":"wikipedia"
 			},
 			"geometry":{
 				"type":"Point",

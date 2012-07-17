@@ -9,6 +9,8 @@ map.selectedTripPlansFeature;
 map.selectedArrivedFeature;
 map.tripPlansPopup;
 map.arrivalPopup;
+map.features = [];
+map.bounds = null;
 
 map.init = function(){
 	
@@ -42,7 +44,14 @@ map.init = function(){
     );
     var ghyb = new OpenLayers.Layer.Google(
         "Google Hybrid",
-        {type: google.maps.MapTypeId.HYBRID, numZoomLevels: 20 }
+        {type: google.maps.MapTypeId.HYBRID, numZoomLevels: 22,
+        	resolutions: [156543.03390625, 78271.516953125, 39135.7584765625,
+                          19567.87923828125, 9783.939619140625, 4891.9698095703125,
+                          2445.9849047851562, 1222.9924523925781, 611.4962261962891,
+                          305.74811309814453, 152.87405654907226, 76.43702827453613,
+                          38.218514137268066, 19.109257068634033, 9.554628534317017,
+                          4.777314267158508, 2.388657133579254, 1.194328566789627,
+                          0.5971642833948135, 0.25, 0.1, 0.05]}
     );
     var gsat = new OpenLayers.Layer.Google(
         "Google Satellite",
@@ -59,59 +68,129 @@ map.init = function(){
         }; 
     
     
-    map.tripLayer = new OpenLayers.Layer.Vector("Trip Plans",{
+    window.map.tripLayer = new OpenLayers.Layer.Vector("Trip Plans",{
     	strategies: [new OpenLayers.Strategy.Fixed()],
     	protocol: new OpenLayers.Protocol.HTTP({
     		url:"resources/data/tripPlans.json",
     		format: new OpenLayers.Format.GeoJSON( in_options )
-    	})
+    	}),
+    	eventListeners:{
+    		"featureselected":function(evt){
+    			window.map.selectedTripPlansFeature = evt.feature;
+    			var feature = evt.feature;
+    			var linkRow;
+    			if( feature.attributes["linkType"] === utils.linkType.wikipedia){
+    				linkRow = "<tr><th class='strong'>link:</th><td><a href=\""+feature.attributes["link"]+"\"><img src=\"resources/img/wikipedia_icon.png\" alt=\"wikipedia\"/></a></td></tr>";
+    			}else if( feature.attributes["linkType"] === utils.linkType.website){
+    				linkRow = "<tr><th class='strong'>link:</th><td><a href=\""+feature.attributes["link"]+"\"><img src=\"resources/img/IE_icon.png\" alt=\"wikipedia\"/></a></td></tr>";
+    			}else{
+    				linkRow = "<tr><th class='strong'></th><td></td></tr>";
+    			}
+    			var popup = new OpenLayers.Popup.FramedCloud( feature.id, feature.geometry.getBounds().getCenterLonLat(), null, 
+    					"<table>"+
+    					"<tr><th class='strong'>interested in:</th><td>"+feature.attributes["interest"]+"</td></tr>"+
+    					"<tr><th class='strong'>Goal:</th><td>"+feature.attributes["forPhil"]+"</td></tr>"+
+    					linkRow+
+    					"</table>", null, true, map.onPopupClose
+    			);
+    			popup.panMapIfOutOfView = true;
+    			feature.popup = popup;
+    			map.addPopup( popup );
+    		},
+    		
+    		"featureunselected":function(evt){
+    			if( evt !== null){
+    				window.map.selectedTripPlansFeature = null;
+    				var feature = evt.feature;
+    				if( feature ){
+    					map.removePopup( feature.popup );
+    					feature.popup.destroy();
+    					feature.popup = null;
+    				}
+    			}
+    		},
+    		"featuresadded":function(evt){
+    			var addedFeatures = evt.features;
+    			var wMap = window.map;
+    			wMap.features.concat( addedFeatures );
+    			for( var i = 0; i<addedFeatures.length; i++ ){
+    				if( !wMap.bounds ){
+        				wMap.bounds = addedFeatures[i].geometry.getBounds();
+        			}else{
+        				wMap.bounds.extend( addedFeatures[i].geometry.getBounds());
+        			}
+    			}
+    			
+    			map.zoomToExtent( wMap.bounds );
+    		}
+    	}
     });
     
     
     
-    map.arrivalLayer = new OpenLayers.Layer.Vector("Arrived",{
+    window.map.arrivalLayer = new OpenLayers.Layer.Vector("Arrived",{
     	strategies: [new OpenLayers.Strategy.Fixed()],
     	protocol: new OpenLayers.Protocol.HTTP({
     		url:"resources/data/arrived.json",
     		format: new OpenLayers.Format.GeoJSON( in_options )
-    	})
-    });
-    
-//    map.arrivalLayer.style = window.map.theme1;
-    
-    map.addLayers( [ map.tripLayer, map.arrivalLayer] );
-
-//    map.arrivalLayer.styleMap = window.map.mapTheme1;
-    window.map.featureControlTripPlans = new OpenLayers.Control.SelectFeature(
-    	map.tripLayer,
-    	{
-    		box: false,
-    		clickout: true,
-    		multiple:false,
-    		toggle: true,
-			onSelect: window.map.onTripPlansFeatureSelect,
-			onUnselect: window.map.onFeatureUnselect
+    	}),
+    	eventListeners:{
+    		"featureselected":function(evt){
+    			window.map.selectedArrivedFeature = evt.feature;
+    			var feature = evt.feature;
+    			var popup = new OpenLayers.Popup.FramedCloud( feature.id, feature.geometry.getBounds().getCenterLonLat(), null, 
+    					"<p>"+feature.attributes["forPhil"]+"</p>", null, true, map.onPopupClose,
+    					{
+    						closeOnMove:true
+    					}
+    				);
+    			popup.panMapIfOutOfView = true;
+    			feature.popup = popup;
+    			map.addPopup( popup );
+    		},
+    		"featureunselected":function(evt){
+				if( evt !== null){
+					window.map.selectedArrivedFeature = null;
+					var feature = evt.feature;
+					if( feature ){
+						map.removePopup( feature.popup );
+						feature.popup.destroy();
+						feature.popup = null;
+					}
+				}
+    		},
+    		"featuresadded":function(evt){
+    			var addedFeatures = evt.features;
+    			var wMap = window.map;
+    			wMap.features.concat( addedFeatures );
+    			for( var i = 0; i<addedFeatures.length; i++ ){
+    				if( !wMap.bounds ){
+        				wMap.bounds = addedFeatures[i].geometry.getBounds();
+        			}else{
+        				wMap.bounds.extend( addedFeatures[i].geometry.getBounds());
+        			}
+    			}
+    			map.zoomToExtent( wMap.bounds );
+    		}
     	}
-    );
-    
-    window.map.featureControlArrival = new OpenLayers.Control.SelectFeature(
-    		map.arrivalLayer,
+    });
+
+    map.addLayers( [ window.map.tripLayer, window.map.arrivalLayer] );
+
+    window.map.featureControl = new OpenLayers.Control.SelectFeature(
+    		[ window.map.tripLayer, window.map.arrivalLayer],
     		{
     			box:false,
     			clickout:true,
     			multiple:false,
-    			toggle:true,
-    			onSelect: window.map.onArrivedFeatureSelect,
-    			onUnselect: window.map.onFeatureUnselect
+    			toggle:true
     		}
-    		);
+    );
     
     map.addControl(new OpenLayers.Control.LayerSwitcher());
-    map.addControl( window.map.featureControlTripPlans );
-    map.addControl( window.map.featureControlArrival );
-    window.map.featureControlTripPlans.activate();
-    window.map.featureControlArrival.activate();
-    map.setCenter(new OpenLayers.LonLat(-114.01234,51.0235).transform("EPSG:4326","EPSG:900913"), 7);
+    map.addControl( window.map.featureControl );
+    window.map.featureControl.activate();
+//    map.setCenter(new OpenLayers.LonLat(-114.01234,51.0235).transform("EPSG:4326","EPSG:900913"), 7);
 
     window.map.styleTripPlansFeatures();
     window.map.styleArrivedFeatures();
@@ -164,15 +243,11 @@ map.theme1 = new OpenLayers.Style({
 
 map.theme2 = new OpenLayers.Style({
 //	"fillColor" : "#FF0000",
-//	"fillOpacity":0.6,
 //	"strokeColor":"#C0C0C0",
 //	"strokeWidth":3,
 //	"pointRadius":15,
-//	"cursor":"pointer"
-	"graphic":true,
-	"externalGraphic":"resources/img/travel1.png",
-	"graphicHeight":48,
-	"graphicWidth":48,
+//	"cursor":"pointer",
+	
 	"label":"${city}",
 	"labelYOffset":20,
 	"fontWeight":"bold",
@@ -180,7 +255,11 @@ map.theme2 = new OpenLayers.Style({
 	"fontOpacity":1,
 	"fontSize":16,
 	"cursor":"pointer",
-	"fill":true
+	"fill":true,
+	"graphic":true,
+	"externalGraphic":"resources/img/travel1.png",
+	"graphicHeight":48,
+	"graphicWidth":48
 });
 
 map.theme3 = new OpenLayers.Style({
@@ -200,18 +279,16 @@ map.mapTheme2 = new OpenLayers.StyleMap({
 
 
 map.styleTripPlansFeatures = function(){
-	map.Map.tripLayer.styleMap = map.mapTheme2;
+	map.tripLayer.styleMap = map.mapTheme2;
 };
 
 map.styleArrivedFeatures = function(){
-	map.Map.arrivalLayer.styleMap = map.mapTheme1;
+	map.arrivalLayer.styleMap = map.mapTheme1;
 };
 
 
 var arrivedSymbolizerLookupSelect = {
 		"visited":{
-			/* big black circle with silver ring*/
-			
 			"fillColor":"#000000",
 			"fillOpacity":0.6,
 			"strokeColor":"#C0C0C0",
@@ -230,21 +307,21 @@ var arrivedSymbolizerLookupSelect = {
 			"externalGraphic":"resources/img/home_town.png",
 			"graphicHeight":48,
 			"graphicWidth":48,
-			"graphicOpacity":0.6
+			"graphicOpacity":0.6,
+			"cursor":"pointer"
 		},
 		"reside":{
 			"graphic":true,
 			"externalGraphic":"resources/img/home_current.png",
 			"graphicHeight":48,
 			"graphicWidth":48,
-			"graphicOpacity":0.6
+			"graphicOpacity":0.6,
+			"cursor":"pointer"
 		}
 };
 
 var arrivedSymbolizerLookupDefault = {
 		"visited":{
-			/* big Greeb circle with silver ring*/
-			
 			"fillColor" : "#00FF00",
 			"fillOpacity": 0.8,
 			"strokeColor": "#C0C0C0",
@@ -263,41 +340,39 @@ var arrivedSymbolizerLookupDefault = {
 			"externalGraphic":"resources/img/home_town.png",
 			"graphicHeight":48,
 			"graphicWidth":48,
-			"graphicOpacity":1
+			"graphicOpacity":1,
+			"cursor":"pointer"
 		},
 		"reside":{
 			"graphic":true,
 			"externalGraphic":"resources/img/home_current.png",
 			"graphicHeight":48,
 			"graphicWidth":48,
-			"graphicOpacity":1
+			"graphicOpacity":1,
+			"cursor":"pointer"
 		}
 };
 
 map.mapTheme1.addUniqueValueRules("default","type",arrivedSymbolizerLookupDefault);
 map.mapTheme1.addUniqueValueRules("select","type",arrivedSymbolizerLookupSelect);
 
-map.onTripPlansPopupClose = function( evt ){
-	map.featureControlTripPlans.unselect( map.selectedTripPlansFeature );
-};
-
-map.onArrivalPopupClose = function( evt ){
-	map.featureControlArrival.unselect( map.selectedArrivedFeature );
-};
-map.onTripPlansFeatureSelect = function( feature ){
-	map.selectedFeature = feature;
-	var popup = new OpenLayers.Popup.FramedCloud( feature.id, feature.geometry.getBounds().getCenterLonLat(), null, 
-			"<table><tr><td>interested in:</td><td>"+feature.attributes["interest"]+"</td></tr><tr><td>Goal:</td><td>"+feature.attributes["forPhil"]+"</td></tr>", null, true, map.onPopupClose );
-	feature.popup = popup;
-	map.Map.addPopup( popup );
-};
-
-map.onArrivedFeatureSelect = function( feature ){
-	// TODO: implement this
-};
-
-map.onFeatureUnselect = function( feature ){
-	map.Map.removePopup( feature.popup );
-	feature.popup.destroy();
-	feature.popup = null;
-};
+//map.onTripPlansPopupClose = function( evt ){
+//	map.featureControlTripPlans.unselect( map.selectedTripPlansFeature );
+//};
+//
+//map.onArrivalPopupClose = function( evt ){
+//	map.featureControlArrival.unselect( map.selectedArrivedFeature );
+//};
+//map.onTripPlansFeatureSelect = function( feature ){
+	
+//};
+//
+//map.onArrivedFeatureSelect = function( feature ){
+//	// TODO: implement this
+//};
+//
+//map.onFeatureUnselect = function( feature ){
+//	map.Map.removePopup( feature.popup );
+//	feature.popup.destroy();
+//	feature.popup = null;
+//};
