@@ -55,12 +55,18 @@ map.init = function(){
     );
     var gsat = new OpenLayers.Layer.Google(
         "Google Satellite",
-        {type: google.maps.MapTypeId.SATELLITE, numZoomLevels: 22}
+        {type: google.maps.MapTypeId.SATELLITE, numZoomLevels: 22,resolutions: [156543.03390625, 78271.516953125, 39135.7584765625,
+                                                                                19567.87923828125, 9783.939619140625, 4891.9698095703125,
+                                                                                2445.9849047851562, 1222.9924523925781, 611.4962261962891,
+                                                                                305.74811309814453, 152.87405654907226, 76.43702827453613,
+                                                                                38.218514137268066, 19.109257068634033, 9.554628534317017,
+                                                                                4.777314267158508, 2.388657133579254, 1.194328566789627,
+                                                                                0.5971642833948135, 0.25, 0.1, 0.05]}
     );
 
    
     // add base layer 
-    map.addLayers([ ghyb ]);
+    map.addLayers([ gsat ]);
     
     var in_options = {
             'internalProjection': map.baseLayer.projection,
@@ -80,9 +86,9 @@ map.init = function(){
     			var feature = evt.feature;
     			var linkRow;
     			if( feature.attributes["linkType"] === utils.linkType.wikipedia){
-    				linkRow = "<tr><th class='strong'>link:</th><td><a href=\""+feature.attributes["link"]+"\"><img src=\"resources/img/wikipedia_icon.png\" alt=\"wikipedia\"/></a></td></tr>";
+    				linkRow = "<tr><th class='strong'>link:</th><td><a href=\""+feature.attributes["link"]+"\" target=\"_blank\"><img src=\"resources/img/wikipedia_icon.png\" alt=\"wikipedia\"/></a></td></tr>";
     			}else if( feature.attributes["linkType"] === utils.linkType.website){
-    				linkRow = "<tr><th class='strong'>link:</th><td><a href=\""+feature.attributes["link"]+"\"><img src=\"resources/img/IE_icon.png\" alt=\"wikipedia\"/></a></td></tr>";
+    				linkRow = "<tr><th class='strong'>link:</th><td><a href=\""+feature.attributes["link"]+"\" target=\"_blank\"><img src=\"resources/img/IE_icon.png\" alt=\"wikipedia\"/></a></td></tr>";
     			}else{
     				linkRow = "<tr><th class='strong'></th><td></td></tr>";
     			}

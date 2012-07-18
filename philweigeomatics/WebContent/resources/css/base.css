@@ -573,6 +573,11 @@ a img{
 	background:url("../img/OSM_Editing_304by191.png") 0 no-repeat;
 }
 
+#myworks_images_wrapper div a{
+	display:block;
+	width:100%;
+	height:100%;	
+}
 /* Lists
 ----------------------------------------*/
 

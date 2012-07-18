@@ -27,7 +27,7 @@
     <!--  stylesheet -->
     <link rel="stylesheet" href="resources/css/reset.css"/>
     <link rel="stylesheet" href="resources/css/base.css"/>
-    <link rel="stylesheet" href="resources/css/main.css"/>
+    <link rel="stylesheet" href="resources/css/lightbox.css"/>
     
     <!--[if IE]><link rel="stylesheet" href="resources/css/base_ie.css"/><![endif]-->
   
@@ -40,6 +40,7 @@
     <script src="resources/js/strings.js"></script>
     <script src="resources/js/skillmap.js"></script>
     <script src="resources/js/site_behaviours.js"></script>
+    <script src="resources/js/lightbox.js"></script>
     <script type="text/javascript"><!--//--><![CDATA[//><!--
 
     window.onload = function(){
@@ -81,7 +82,6 @@
 					</div>
 					<div class="leftfloat" style="width:2px; margin-left:1px; margin-right:1px"><a href="#" class="verticalbar">|</a></div> 
 					<div class="rightfloat barright">
-						<!--  TODO: Rework this Contact Phil section. Doesn't work well on both IE and Chrome -->
 						<a href="#">Link Phil</a>
 						<ul>
 							<li id="fb"><a href="http://www.facebook.com/phil.wei.77">Facebook</a></li>
@@ -143,10 +143,13 @@
 				</div>
 				<div id="myworks_images_wrapper">
 					<div class="myworks_img rounded_border" id="myworks_img1">
+						<a href="resources/img/gis_editing_800by476.png" rel="lightbox[works]" title="Map Editing in Quantum GIS"></a>
 					</div>
 					<div class="myworks_img rounded_border" id="myworks_img2">
+						<a href="resources/img/cartography_800by501.png" rel="lightbox[works]" title="Cartography using TileMill by MapBox"></a>
 					</div>
 					<div class="myworks_img rounded_border" id="myworks_img3">
+						<a href="resources/img/OSM_Editing_800by476.png" rel="lightbox[works]" title="Editing OpenStreetMap POI using OSM Potlatch"></a>
 					</div>
 				</div>
 			</section>
@@ -180,7 +183,7 @@
 		</div>	
 		<footer class="container">
 			<div class="inner">
-				<h3>&copy; Tengfei Wei</h3>
+				<h3>Copyright &copy; 2012 Tengfei Wei</h3>
 			</div>
 		</footer>
 	</div>

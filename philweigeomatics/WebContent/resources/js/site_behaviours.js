@@ -51,10 +51,16 @@ var siteInit = function(){
 		myskills.textArea_jq.css("margin-top","-"+height+"px");
 	}
 	
-	// Load text for programming languages first.
+	// Load the programming languages for the first time
 	if( skillmap && skillmap.programmingLanguages && skillmap.programmingLanguages.desc ){
 		myskills.textArea_jq.html( skillmap.programmingLanguages.desc );
-		
+		myskills.iconimg.attr("src",skillmap.programmingLanguages.imgSrc );
+		var str = "";
+		for( a in skillmap.programmingLanguages.area ){
+			if( typeof skillmap.programmingLanguages.area[a] === "string" )
+				str += skillmap.programmingLanguages.area[a];
+		}
+		myskills.iconmap.html( str );
 		setMarginTopForSkillTextArea();
 	}
 	
