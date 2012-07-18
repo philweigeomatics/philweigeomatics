@@ -4,6 +4,22 @@ header, section, footer, aside, nav, article, figure, figcaption{
 
 /* Typography & Colors
 ----------------------------------------*/
+.lt-ie7 .container{
+	display: none;
+}
+
+.lt-ie8 .container{
+	display:none;
+}
+
+.lt-ie9 .container{
+	display:none;
+}
+
+#lt-ie9{
+	display:none;
+}
+
 body{
 	/* setting global styles */
 	color:#666666;

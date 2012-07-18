@@ -1,4 +1,11 @@
-.bg_bl{
-	background-color:transparent;
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#000000E5, endColorstr=#000000E5);
+.lt-ie9 #lt-ie9{
+	display:block;
+	width:100%;
+}
+
+.lt-ie9 #lt-ie9 div{
+	width:400px;
+	margin:auto;
+	font-size:2.5em;
+	color:#CC0000;
 }
